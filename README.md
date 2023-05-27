@@ -1,19 +1,24 @@
 # Fastapi-SeleniumGrid
 
-## ¤U¸ü±M®×
+## å¿«é€Ÿå®‰è£Docker CE + Docker compose
+
+``` cmd
+bash <(curl -sSL https://cdn.jsdelivr.net/gh/SuperManito/LinuxMirrors@main/DockerInstallation.sh)
+```
+
+## ä¸‹è¼‰å°ˆæ¡ˆ
 
 ``` cmd
 https://github.com/draguitar/Fastapi-SeleniumGrid.git
 ```
 
 
-
+## é€édocker compose ä½ˆç½²
 ``` cmd
-docker compose --project-name <Stack_name> up -d 
+docker compose --project-name <Stack_name> up -d
 ```
 
-## ³z¹LÂsÄı¾¹
-
+## é€éç€è¦½å™¨
 ### Selenium-Grid
 
 ```
