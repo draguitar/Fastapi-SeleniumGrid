@@ -24,7 +24,7 @@ def read_item(item_id: int, q: Union[str, None] = None):
 def selenium(item_id: int):
     try:
         browser = webdriver.Remote(
-        command_executor='http://10.14.140.15:14444/wd/hub',
+        command_executor='http://xxx.xxx.xx.xx:14444/wd/hub',
         options=webdriver.ChromeOptions()
         )
         browser.get('https://www.google.com')
