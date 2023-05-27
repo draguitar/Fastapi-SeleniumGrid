@@ -1,0 +1,30 @@
+version: "3"
+services:
+  chrome:
+    container_name: selenium-cp
+    image: selenium/standalone-chrome
+    ports:
+      - "14444:4444"
+      - "17900:7900"
+    environment:
+      - SE_VNC_NO_PASSWORD=1 # NO_PASSWORD
+    #   - SE_VNC_VIEW_ONLY=1   # readonly
+    networks:
+      - selenium-net
+
+  fastapi-app:
+    container_name: fastapi-cp
+    build: .
+    image: fastapi-cp:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/code/app
+    depends_on:
+      - chrome
+    networks:
+      - selenium-net
+
+networks:
+  selenium-net:
+
